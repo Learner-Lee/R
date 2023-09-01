@@ -1,0 +1,7 @@
+conf<-function(x,sigma,alpha){
+options(digit=3)
+n<-length(x)
+mean<-mean(x)
+result<-c(mean-sigma*qnorm(1-alpha/2)/sqrt(n), mean+sigma*qnorm(1-alpha/2)/sqrt(n))
+result
+}

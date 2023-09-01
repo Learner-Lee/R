@@ -1,0 +1,11 @@
+zsq<-function(n)
+{ a<-numeric(n)
+a[1]<-1
+a[2]<-1
+for (i in 3:n){
+  a[i]<-a[i-1]+a[i-2]
+}
+return(a)
+}
+
+

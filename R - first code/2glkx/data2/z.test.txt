@@ -1,0 +1,21 @@
+z.test<-function(x,n,sigma,alpha,u0=0,alternative="two.sided"){
+options(digits=4)
+result<list()
+mean<-mean(x)
+z<-(mean(x)-u0)/(sigma/sqrt(n))
+p<-pnorm(z,lower.tail=FALSE)
+result$mean<-mean
+result$z<-z
+result$p.value<-p
+if(alternative=="two.sided"){
+  p<-2*p
+¡¡result$p.value<-p
+}
+else if (alternative=="greater"| alternative=="less"){
+  result$p.value<-p
+}
+else return("your input is wrong")
+result$conf.int<-c(mean-sigma*qnorm(1-alpha/2,mean=0,sd=1,lower.tail=TRUE)/sqrt(n), mean+sigma*qnorm(1-alpha/2,mean=0,sd=1,lower.tail=TRUE)/sqrt(n))
+result
+}
+

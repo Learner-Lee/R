@@ -1,0 +1,9 @@
+library(RODBC)
+z<-odbcConnectExcel2007("C:/Users/PZ_EDU/Desktop/2glkx/data2/al5-2.xls")
+sq<-sqlFetch(z,"Sheet1")
+sq
+plot(sq$YW,sq$SX)
+plot(sq$YW,sq$SX,main="学生",xlim=c(60,100),ylim=c(60,80))
+plot(sq$YW,sq$SX,main="学生",xlim=c(60,100),ylim=c(60,80),pch=5)
+plot(sq$YW,sq$SX,pch=2,col="yellow")
+close(z)

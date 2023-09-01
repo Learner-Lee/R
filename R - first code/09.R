@@ -1,0 +1,6 @@
+data <- c(4.51,10.69,9.33,1,2,3,4,5)
+labs <- c('s1','s1','s1','s1','s1','s1','s1','s1')
+barplot(data,col = c('steelblue','steelblue','steelblue',"mediumturquoise","mediumturquoise","hotpink","hotpink","hotpink"),ylim = c(0,14),width = 1,space = 1,ylab = "%(...)",las=1)
+text(x=seq(1.5,25.5,by=2),y = -0.15,srt = 45,abj = 1,labels = labs,xpd=TRUE)
+abline(h=c(2,4,6,8,10,12,14),col="#00000088",lwd=2)
+adline(h=0)

@@ -1,0 +1,12 @@
+size.norm2<-function(s,alpha,d,m){
+t1<-qt(alpha/2,m,lower.tail=FALSE)
+n1<-(t1*s/d)^2
+t2<-qt(alpha/2,n1,lower.tail=FALSE)
+n2<-(t2*s/d)^2
+while(abs(n2-n1)>0.5){
+n1<-(qt(alpha/2,n2,lower.tail=FALSE)*s/d)^2
+n2<-(qt(alpha/2,n1,lower.tail=FALSE)*s/d)^2
+}
+n2
+}
+
