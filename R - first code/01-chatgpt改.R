@@ -27,7 +27,7 @@ hist_params <- list(
 par(mfrow = c(2, 2))
 
 # 绘制不同设置的直方图
-hist(sq$DLXF, ...)
-hist(sq$DLXF, main = "电力消费情况", ...)
-hist(sq$DLXF, main = "电力消费情况", xlim = c(0, 4000), ..., ylim = c(0, 15))
-hist(sq$DLXF, main = "电力消费情况", xlim = c(min(sq$DLXF), max(sq$DLXF)), ylim = c(0, 15), ...)
+hist(sq$DLXF, main = hist_params$main, xlab = hist_params$xlab, ylab = hist_params$ylab)
+hist(sq$DLXF, main = "电力消费情况", xlab = hist_params$xlab, ylab = hist_params$ylab)
+hist(sq$DLXF, main = "电力消费情况", xlim = c(0, 4000), xlab = hist_params$xlab, ylab = hist_params$ylab)
+hist(sq$DLXF, main = "电力消费情况", xlim = c(min(sq$DLXF), max(sq$DLXF)), ylim = c(0, 15), xlab = hist_params$xlab, ylab = hist_params$ylab)
