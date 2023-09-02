@@ -1,0 +1,7 @@
+curve(dchisq(x,1),xlim = c(0,10),ylim = c(0,0.6),col='red',lwd=2)
+curve(dchisq(x,2),add=T,col='green',lwd=2)
+curve(dchisq(x,3),add=T,col='blue',lwd=2)
+curve(dchisq(x,5),add=T,col='orange',lwd=2)
+abline(h=0,lty = 3)
+abline(v=0,lty = 3)
+title("view")

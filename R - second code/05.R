@@ -1,0 +1,6 @@
+curve(df(x,1,1),xlim = c(0,2),ylim = c(0,0.8),lty = 2)
+curve(df(x,3,1),add=T,lwd=2,lty = 2)
+curve(df(x,6,1),add=T,lwd=2,lty = 3)
+curve(df(x,3,3),add=T,col='green',lwd=3,lty = 4)
+curve(df(x,3,6),add=T,col='orange',lwd=3,lty = 5)
+title("view")

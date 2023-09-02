@@ -1,0 +1,5 @@
+curve(dt(x,1),xlim = c(-3,3),ylim = c(0,0.4),col='red',lwd=2,lty = 1)
+curve(dt(x,2),add=T,col='green',lwd=2,lty = 2)
+curve(dt(x,10),add=T,col='orange',lwd=2,lty = 3)
+curve(dnorm(x),add=T,lwd=3,lty = 4)
+title("view")

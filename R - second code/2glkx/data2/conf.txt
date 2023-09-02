@@ -1,0 +1,5 @@
+conf.int<function(x,n,sigma,alpha){
+options(digit=4)
+mean<-mean(x)
+c(mean-sigma*qnorm(1-alpha/2,mean=0,sd=1,lower.tail=TRUE/sqrt(n),mean+sigma*qnorm(1-alpha/2,mean=0,sd=1,lower.tail=TRUE/sqrt(n))
+}
